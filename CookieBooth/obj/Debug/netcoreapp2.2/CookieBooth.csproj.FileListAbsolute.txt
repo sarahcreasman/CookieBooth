@@ -22,3 +22,15 @@ C:\Users\Sarah\Documents\Code Louisville\CookieBooth\CookieBooth\obj\Debug\netco
 C:\Users\Sarah\Documents\Code Louisville\CookieBooth\CookieBooth\obj\Debug\netcoreapp2.2\CookieBooth.AssemblyInfo.cs
 C:\Users\Sarah\Documents\Code Louisville\CookieBooth\CookieBooth\obj\Debug\netcoreapp2.2\CookieBooth.dll
 C:\Users\Sarah\Documents\Code Louisville\CookieBooth\CookieBooth\obj\Debug\netcoreapp2.2\CookieBooth.pdb
+C:\Users\Sarah\Documents\CodeLouisville\GSCookieBooth\CookieBooth\bin\Debug\netcoreapp2.2\cookieList.csv
+C:\Users\Sarah\Documents\CodeLouisville\GSCookieBooth\CookieBooth\bin\Debug\netcoreapp2.2\CookieBooth.deps.json
+C:\Users\Sarah\Documents\CodeLouisville\GSCookieBooth\CookieBooth\bin\Debug\netcoreapp2.2\CookieBooth.runtimeconfig.json
+C:\Users\Sarah\Documents\CodeLouisville\GSCookieBooth\CookieBooth\bin\Debug\netcoreapp2.2\CookieBooth.runtimeconfig.dev.json
+C:\Users\Sarah\Documents\CodeLouisville\GSCookieBooth\CookieBooth\bin\Debug\netcoreapp2.2\CookieBooth.dll
+C:\Users\Sarah\Documents\CodeLouisville\GSCookieBooth\CookieBooth\bin\Debug\netcoreapp2.2\CookieBooth.pdb
+C:\Users\Sarah\Documents\CodeLouisville\GSCookieBooth\CookieBooth\obj\Debug\netcoreapp2.2\CookieBooth.csprojAssemblyReference.cache
+C:\Users\Sarah\Documents\CodeLouisville\GSCookieBooth\CookieBooth\obj\Debug\netcoreapp2.2\CookieBooth.csproj.CoreCompileInputs.cache
+C:\Users\Sarah\Documents\CodeLouisville\GSCookieBooth\CookieBooth\obj\Debug\netcoreapp2.2\CookieBooth.AssemblyInfoInputs.cache
+C:\Users\Sarah\Documents\CodeLouisville\GSCookieBooth\CookieBooth\obj\Debug\netcoreapp2.2\CookieBooth.AssemblyInfo.cs
+C:\Users\Sarah\Documents\CodeLouisville\GSCookieBooth\CookieBooth\obj\Debug\netcoreapp2.2\CookieBooth.dll
+C:\Users\Sarah\Documents\CodeLouisville\GSCookieBooth\CookieBooth\obj\Debug\netcoreapp2.2\CookieBooth.pdb
