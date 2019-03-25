@@ -9,41 +9,84 @@ namespace CookieBooth
         static void Main(string[] args)
         {
             var lines = System.IO.File.ReadLines("cookieList.csv");
-            var cookiesList = new List<Cookie>();
+            var CookiesList = new List<Cookie>();
 
-            bool firstRecord = true;
             foreach (var line in lines.Skip(1))
             {
                 var fields = line.Split(',');
-                var cookie = new Cookie(fields[0], double.Parse(fields[1]), int.Parse(fields[2]));
+                var cookie = new Cookie(fields[0], int.Parse(fields[1]));
 
-                cookiesList.Add(cookie);
-                // Console.WriteLine(cookie.Name);
+                CookiesList.Add(cookie);
             }
 
-            foreach (var cookie in cookiesList)
+            foreach (var cookie in CookiesList)
             {
-                Console.WriteLine(cookie.Name + ", $" + cookie.Cost + ", " + cookie.InStock);
+                Console.WriteLine(cookie.Name + ", "  + cookie.InStock);
             }
 
+            Console.WriteLine("Would you like to update inventory? Enter Y or press any key to exit.");
+            string userInput = Console.ReadLine();
 
-            // TODO: add while loop to continue going through until ending
-            Console.WriteLine("What cookie would you like to add stock to?");
-            string addCookie = Console.ReadLine();
-
-            Console.WriteLine("How many cases are you adding?");
-            string addCases = Console.ReadLine();
-
-            Console.WriteLine("You would like to add " + addCases + " cases of " + addCookie + "? Enter Y to Confirm or hit any button to cancel.");
-            string confirmation = Console.ReadLine();
-
-            if (confirmation.ToUpper() == "Y")
+            while (userInput.ToUpper() == "Y")
             {
-                Console.WriteLine("Order Added!");
-            }
-            else
-            {
-                Console.WriteLine("Goodbye!");
+                Console.WriteLine("Would you like to add, remove, or view inventory? Enter Add, Remove, View, or press any key to exit");
+                string AddRemove = Console.ReadLine();
+
+                if (AddRemove.ToLower() == "add")
+                {
+                    // TODO: add cookies to inventory
+                    Console.WriteLine("What cookie would you like to add?");
+                    string cookieName = Console.ReadLine();
+                    Console.WriteLine("How many cases would you like to add?");
+                    int cookieCases = Convert.ToInt32(Console.ReadLine());
+
+                    foreach(Cookie cookie in CookiesList)
+                    {
+                        if (cookie.Name.ToLower() == cookieName) {
+                            cookie.InStock += cookieCases;
+                            Console.WriteLine(cookie.Name + " has " + cookie.InStock + " cases in stock.");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Cookie not found.");
+                        }
+                    }
+                }
+
+                if (AddRemove.ToLower() == "remove")
+                {
+                    Console.WriteLine("What cookie would you like to remove?");
+                    string cookieName = Console.ReadLine();
+                    Console.WriteLine("How many cases would you like to remove?");
+                    int cookieCases = Convert.ToInt32(Console.ReadLine());
+
+                    foreach (Cookie cookie in CookiesList)
+                    {
+                        if (cookie.Name.ToLower() == cookieName)
+                        {
+                            cookie.InStock -= cookieCases;
+                            Console.WriteLine(cookie.Name + " has " + cookie.InStock + " cases in stock.");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Cookie not found.");
+                        }
+                    }
+                }
+
+                if (AddRemove.ToLower() == "view")
+                {
+                    foreach (var cookie in CookiesList)
+                    {
+                        Console.WriteLine("Cookie: " + cookie.Name + " \n In Stock: " + cookie.InStock + "\n");
+                    }
+                }
+
+                else
+                {
+                    Console.WriteLine("Would you like to update inventory? Enter Y or press any key to exit.");
+                    userInput = Console.ReadLine();
+                }
             }
         }
     }
