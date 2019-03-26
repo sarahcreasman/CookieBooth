@@ -57,13 +57,13 @@ namespace CookieBooth
                         }
                     }
 
-                    // Writes new total to the csv file
-                    foreach(Cookie cookie in CookiesList)
-                    {
-                        var NewData = cookie.Name + "," + cookie.InStock;
-                        build.AppendLine(NewData);
-                    }
-                    writer.Write(build.ToString());
+                    //// Writes new total to the csv file
+                    //foreach(Cookie cookie in CookiesList)
+                    //{
+                    //    var NewData = cookie.Name + "," + cookie.InStock;
+                    //    build.AppendLine(NewData);
+                    //}
+                    //writer.Write(build.ToString());
                 }
 
                 // Removes cookies from inventory
@@ -78,26 +78,10 @@ namespace CookieBooth
                     {
                         if (cookie.Name.ToLower().Contains(cookieName))
                         {
-                            if (cookieCases <= cookie.InStock)
-                            {
-                                cookie.InStock -= cookieCases;
-                                Console.WriteLine(cookie.Name + " has " + cookie.InStock + " cases in stock.");
-                            }
-                            else
-                            {
-                                Console.WriteLine("You cannot take more cookies than you have in inventory!");
-                                Console.WriteLine(cookie.Name + " has " + cookie.InStock + " cases in stock.");
-                            }
+                            cookie.InStock -= cookieCases;
+                            Console.WriteLine(cookie.Name + " has " + cookie.InStock + " cases in stock.");
                         }
-                    }
-                    
-                    // Writes new total to CSV file
-                    foreach (Cookie cookie in CookiesList)
-                    {
-                        var NewData = cookie.Name + "," + cookie.InStock;
-                        build.AppendLine(NewData);
-                    }
-                    writer.Write(build.ToString());
+                    }    
                 }
 
                 // Views cookies in inventory
@@ -107,6 +91,9 @@ namespace CookieBooth
                     {
                         Console.WriteLine("Cookie: " + cookie.Name + " \n In Stock: " + cookie.InStock + "\n");
                     }
+
+                    Console.WriteLine("Would you like to update inventory? Enter Y or press any key to exit.");
+                    userInput = Console.ReadLine();
                 }
 
                 // Restarts loop with any other text entry
@@ -117,6 +104,13 @@ namespace CookieBooth
                 }
             }
 
+            // Writes new total to CSV file
+            foreach (Cookie cookie in CookiesList)
+            {
+                var NewData = cookie.Name + "," + cookie.InStock;
+                build.AppendLine(NewData);
+            }
+            writer.Write(build.ToString());
             writer.Close();
         }
     }
