@@ -692,11 +692,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Sarah\\Documents\\CodeLouisville\\GSCookieBooth\\CookieBooth\\CookieBooth.csproj",
+      "projectUniqueName": "C:\\Users\\Sarah\\Documents\\Code Louisville\\CookieBooth\\CookieBooth\\CookieBooth.csproj",
       "projectName": "CookieBooth",
-      "projectPath": "C:\\Users\\Sarah\\Documents\\CodeLouisville\\GSCookieBooth\\CookieBooth\\CookieBooth.csproj",
+      "projectPath": "C:\\Users\\Sarah\\Documents\\Code Louisville\\CookieBooth\\CookieBooth\\CookieBooth.csproj",
       "packagesPath": "C:\\Users\\Sarah\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Sarah\\Documents\\CodeLouisville\\GSCookieBooth\\CookieBooth\\obj\\",
+      "outputPath": "C:\\Users\\Sarah\\Documents\\Code Louisville\\CookieBooth\\CookieBooth\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -20,7 +20,7 @@ namespace CookieBooth
             var CookiesList = new List<Cookie>();
 
             // Separates cookieList.csv into individual objects.
-            foreach (var line in lines.Skip(1))
+            foreach (var line in lines)
             {
                 var fields = line.Split(',');
                 var cookie = new Cookie(fields[0], int.Parse(fields[1]));
@@ -56,14 +56,6 @@ namespace CookieBooth
                             Console.WriteLine(cookie.Name + " has " + cookie.InStock + " cases in stock.");
                         }
                     }
-
-                    //// Writes new total to the csv file
-                    //foreach(Cookie cookie in CookiesList)
-                    //{
-                    //    var NewData = cookie.Name + "," + cookie.InStock;
-                    //    build.AppendLine(NewData);
-                    //}
-                    //writer.Write(build.ToString());
                 }
 
                 // Removes cookies from inventory
