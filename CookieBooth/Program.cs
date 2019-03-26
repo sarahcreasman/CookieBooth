@@ -23,7 +23,7 @@ namespace CookieBooth
             foreach (var line in lines)
             {
                 var fields = line.Split(',');
-                var cookie = new Cookie(fields[0], int.Parse(fields[1]));
+                var cookie = new Cookie(fields[0], int.Parse(fields[1])); // Creates Cookie object for each of the cookies in list
 
                 CookiesList.Add(cookie);
             }
