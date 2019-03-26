@@ -70,8 +70,16 @@ namespace CookieBooth
                     {
                         if (cookie.Name.ToLower().Contains(cookieName))
                         {
-                            cookie.InStock -= cookieCases;
-                            Console.WriteLine(cookie.Name + " has " + cookie.InStock + " cases in stock.");
+                            // Validates that the amount of cookies removed from stock is not greater than the amount in stock
+                            if (cookieCases <= cookie.InStock)
+                            {
+                                cookie.InStock -= cookieCases;
+                                Console.WriteLine(cookie.Name + " has " + cookie.InStock + " cases in stock.");
+                            }
+                            else
+                            {
+                                Console.WriteLine("Not enough in stock. Try again.");
+                            }
                         }
                     }    
                 }
@@ -103,6 +111,8 @@ namespace CookieBooth
                 build.AppendLine(NewData);
             }
             writer.Write(build.ToString());
+
+            // Closes StreamWriter and ends the program
             writer.Close();
         }
     }

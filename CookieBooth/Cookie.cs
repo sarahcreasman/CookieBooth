@@ -13,7 +13,7 @@ namespace CookieBooth
     {
         // Variables
         public string Name;
-        public int InStock; // Cartons in stock
+        public int InStock; // Cases of cookies in stock
 
         // Builds the object from information passed by Main Method
         public Cookie(string name, int inStock)
