@@ -1,6 +1,6 @@
 ﻿/* Program Name: CookieBooth.cs
  * Written By: Sarah Creasman
- * Last Updated: March 25, 2019
+ * Last Updated: March 27, 2019
  * Purpose: To update the inventory of a girl scout troops stock of cookies for Cookie Booths. */
 
 using System;
@@ -46,6 +46,7 @@ namespace CookieBooth
                 {
                     Console.WriteLine("What cookie would you like to add?");
                     string cookieName = Console.ReadLine();
+                    cookieName = cookieName.ToLower();
                     Console.WriteLine("How many cases would you like to add?");
                     int cookieCases = Convert.ToInt32(Console.ReadLine());
 
@@ -63,6 +64,7 @@ namespace CookieBooth
                 {
                     Console.WriteLine("What cookie would you like to remove?");
                     string cookieName = Console.ReadLine();
+                    cookieName = cookieName.ToLower();
                     Console.WriteLine("How many cases would you like to remove?");
                     int cookieCases = Convert.ToInt32(Console.ReadLine());
 
